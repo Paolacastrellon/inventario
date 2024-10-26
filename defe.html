@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventario de Laboratorio Químico</title>
+</head>
+<body>
+<h1>Inventario de Productos del Laboratorio Químico</h1>
+
+<fieldset>
+<legend>Registrar un nuevo producto</legend>
+<form action="#" method="post">
+<label for="nombreProducto">Nombre del producto:</label><br>
+<input type="text" id="nombreProducto" name="nombreProducto" required><br><br>
+
+<label for="cantidadProducto">Cantidad:</label><br>
+<input type="number" id="cantidadProducto" name="cantidadProducto" min="1" required><br><br>
+
+<label for="precioProducto">Precio por unidad (USD):</label><br>
+<input type="number" id="precioProducto" name="precioProducto" step="0.01" min="0" required><br><br>
+
+<label for="tipoProducto">Tipo de producto:</label><br>
+<input list="tiposProducto" name="tipoProducto" required>
+<datalist id="tiposProducto">
+<option value="Sólido">
+<option value="Líquido">
+<option value="Gaseoso">
+</datalist><br><br>
+
+<input type="submit" value="Agregar Producto">
+</form>
+</fieldset>
+
+<br>
+
+<fieldset>
+<legend>Lista de productos registrados</legend>
+<table border="1">
+<thead>
+<tr>
+<th>Nombre del producto</th>
+<th>Cantidad</th>
+<th>Precio (USD)</th>
+<th>Tipo de producto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ácido sulfúrico</td>
+<td>20</td>
+<td>12.50</td>
+<td>Líquido</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Sal (Cloruro de sodio)</td>
+<td>50</td>
+<td>0.50</td>
+<td>Sólido</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Nitrato de plata</td>
+<td>5</td>
+<td>25.00</td>
+<td>Sólido</td>
+<td>
+<tr>
+<td>Etanol</td>
+<td>15</td>
+<td>3.00</td>
+<td>Líquido</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Cloroformo</td>
+<td>8</td>
+<td>15.00</td>
+<td>Líquido</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Ácido sulfúrico</td>
+<td>20</td>
+<td>12.50</td>
+<td>Líquido</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Ácido cítrico</td>
+<td>50</td>
+<td>180</td>
+<td>líquido</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Metanol</td>
+<td>13</td>
+<td>45.00</td>
+<td>líquido</td>
+<td>
+<tr>
+<td>Benceno</td>
+<td>4</td>
+<td>5.70</td>
+<td>Líquido</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Glucosa</td>
+<td>3</td>
+<td>7.00</td>
+<td>sólido</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>Etanol</td>
+<td>3</td>
+<td>21.0</td>
+<td>líquido</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</fieldset>
+
+<br>
+
+<fieldset>
+<legend>Editar producto existente</legend>
+<form action="#" method="post">
+<label for="productoEditar">Seleccionar producto:</label><br>
+<select id="productoEditar" name="productoEditar" required>
+<option value="acido_sulfurico">Ácido sulfúrico</option>
+<option value="cloruro_de_sodio">Cloruro de sodio</option>
+<option value="nitrato_de_plata">Nitrato de plata</option>
+<option value="acido_sulfhidrico">Ácido sulfhídrico</option>
+<option value="hidroxido_de_sodio">Hidróxido de sodio</option>
+<option value="etanol">Etanol</option>
+<option value="cloroformo">Cloroformo</option>
+<option value="benceno">Benceno</option>
+<option value="acido_citrico">Ácido cítrico</option>
+<option value="glucosa">Glucosa</option>
+<option value="metanol">Metanol</option>
+</select><br><br>
+
+<label for="nuevoNombreProducto">Nuevo nombre del producto:</label><br>
+<input type="text" id="nuevoNombreProducto" name="nuevoNombreProducto" required><br><br>
+
+<label for="nuevaCantidadProducto">Nueva cantidad:</label><br>
+<input type="number" id="nuevaCantidadProducto" name="nuevaCantidadProducto" min="1" required><br><br>
+
+<label for="nuevoPrecioProducto">Nuevo precio por unidad (USD):</label><br>
+<input type="number" id="nuevoPrecioProducto" name="nuevoPrecioProducto" step="0.01" min="0" required><br><br>
+
+<label for="nuevoTipoProducto">Nuevo tipo de producto:</label><br>
+<input list="tiposProductoEditar" name="nuevoTipoProducto" required>
+<datalist id="tiposProductoEditar">
+<option value="Sólido">
+<option value="Líquido">
+<option value="Gaseoso">
+</datalist><br><br>
+
+<input type="submit" value="Actualizar Producto">
+</form>
+</fieldset>
+
+<br>
+
+<fieldset>
+<legend>Buscar producto</legend>
+<form action="#" method="get">
+<label for="buscarProducto">Buscar producto por nombre:</label><br>
+<input type="text" id="buscarProducto" name="buscarProducto"><br><br>
+<input type="submit" value="Buscar">
+</form>
+</fieldset>
+
+<br>
+
+<fieldset>
+<legend>Estadísticas del inventario</legend>
+<p>Total de productos registrados: 11</p>
+<p>Valor total del inventario (USD): 327.00</p>
+</fieldset>
+
+</body>
+</html>
+
+
